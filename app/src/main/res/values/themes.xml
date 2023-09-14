@@ -1,0 +1,46 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
+        <!-- colorPrimary is used, for instance, for the default ActionBar
+             (but not Toolbar) background.
+              We specify the same color for the toolbar background in
+              toolbar.xml.. -->
+        <item name="colorPrimary">@color/white</item>
+
+        <!-- colorPrimaryDark is used for the status bar (with the
+             battery, clock, etc). -->
+        <item name="colorPrimaryDark">@drawable/white_border_bottom_bg</item>
+
+        <!-- colorAccent is used as the default value for
+             colorControlActivated which is used to tint widgets. -->
+        <item name="colorAccent">@color/secondary_title_color</item>
+
+    </style>
+    <style name="Theme.DaggerHiltIntoduction" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="AppTheme.MaterialComponent" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="viewInflaterClass">androidx.appcompat.app.AppCompatViewInflater</item>
+
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

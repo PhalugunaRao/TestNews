@@ -1,0 +1,148 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="articles"
+            type="com.example.news.model.NewsArticle" />
+
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:behavior_overlapTop="100dp"
+            android:layout_weight="1"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/article_detail_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_220sdp"
+                        android:adjustViewBounds="true"
+                        app:imageUrl="@{articles.urlToImage}"
+                        android:scaleType="fitCenter" />
+                    <ImageView
+                        android:id="@+id/article_back"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:adjustViewBounds="true"
+                        android:padding="@dimen/_8sdp"
+                        android:layout_gravity="left"
+                        android:background="@drawable/back_shape"
+                        android:src="@drawable/arrow_back_black_24dp"
+                        android:scaleType="centerCrop" />
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/categoryTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:textAllCaps="true"
+                    android:text="@{articles.author}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_10ssp"
+                    android:fontFamily="@font/librefranklin_bold"
+                    tools:text="US - TECHNOLOGY"
+                    />
+
+                <TextView
+                    android:id="@+id/article_detail_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16ssp"
+                    android:lineSpacingExtra="@dimen/_4sdp"
+                    android:text="@{articles.title}"
+                    android:fontFamily="@font/librefranklin_extrabold"
+                    tools:text="US - TECHNOLOGY"
+                     />
+
+
+
+                <TextView
+                    android:id="@+id/article_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_12sdp"
+                    android:textColor="@color/sub_text_secondary_color"
+                    android:textSize="@dimen/_12ssp"
+                    android:lineSpacingExtra="@dimen/_4sdp"
+                    android:text="@{articles.shortenedDescription}"
+                    tools:text="US - TECHNOLOGY"
+                    android:fontFamily="@font/librefranklin_regular"
+                    />
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/shadow"></View>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="@dimen/_16sdp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:padding="@dimen/_8sdp"
+                android:text="Share"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:textColor="@color/purple"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/librefranklin_semibold"
+
+                />
+            <TextView
+                android:id="@+id/full_article"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/purple"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:padding="@dimen/_8sdp"
+                android:text="Full article"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/librefranklin_semibold"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

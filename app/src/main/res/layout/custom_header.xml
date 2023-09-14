@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.Base"
+        app:elevation="6dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/common_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:minHeight="60dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:theme="@style/ToolbarColoredBackArrow"
+            app:title="ekincare"
+            app:titleTextAppearance="@style/Toolbar.TitleText">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:padding="2dp"
+                android:src="@drawable/ic_menu"
+                />
+            <LinearLayout
+                android:id="@+id/layout_filter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="21dp"
+                android:gravity="center|left">
+
+                <TextView
+                    android:id="@+id/common_toolbarText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="Front Page"
+                    android:layout_gravity="center"
+                    android:textColor="@color/main_title_color"
+                    android:textSize="@dimen/_20ssp"
+                   android:fontFamily="@font/librefranklin_extrabolditalic"
+                     />
+
+                <ImageView
+                    android:id="@+id/common_filter_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_search"
+                    />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+</layout>

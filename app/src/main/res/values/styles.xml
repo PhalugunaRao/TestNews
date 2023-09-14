@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="ToolbarColoredBackArrow" parent="AppTheme">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColorPrimary">@color/main_title_color</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColorSecondary">@color/main_title_color</item>
+        <item name="homeAsUpIndicator">@android:drawable/menu_frame</item>
+        <item name="elevation" tools:targetApi="lollipop">0dp</item>
+        <item name="android:fontFamily">fonts/LibreFranklin-BoldItalic.ttf</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>
